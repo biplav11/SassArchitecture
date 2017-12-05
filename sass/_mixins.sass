@@ -1,0 +1,34 @@
+=box($rad, $shadowColor, $grad1, $grad2 )
+    -webkit-border-radius: $rad
+    -moz-border-radius: $rad
+    -ms-border-radius: $rad
+    -o-border-radius: $rad
+    border-radius: $rad
+
+    -webkit-box-shadow: 0 5px 5px $shadowColor
+    -moz-box-shadow: 0 5px 5px $shadowColor
+    -ms-box-shadow: 0 5px 5px $shadowColor
+    -o-box-shadow: 0 5px 5px $shadowColor
+    box-shadow: 0 5px 5px $shadowColor
+
+    background: -webkit-linear-gradient($grad1, $grad2)
+    background: -moz-linear-gradient($grad1, $grad2)
+    background: -o-linear-gradient($grad1, $grad2)
+    background: linear-gradient($grad1, $grad2)
+
+=circle($rad, $height, $width, $bg, $color)
+    -webkit-border-radius: $rad
+    -moz-border-radius: $rad
+    -ms-border-radius: $rad
+    border-radius: $rad
+
+    height: $height
+    width: $width
+
+    line-height: $height
+    text-align: center
+
+    background: $bg
+    color: $color
+
+    margin: 0 auto
