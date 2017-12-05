@@ -1,6 +1,20 @@
+// CONTAINER
+
+header
+  text-align: center
+
 .container
-        width: 768px
-        margin: 0 auto
-        padding: 40px
-        box-sizing: border-box
-        background: #fff
+  padding: $gutter
+  width: $content-width
+  margin: $gutter auto
+  box-sizing: border-box
+  background: white
+  +cascade($pink)
+
+article
+  +columns(3 200px)
+  +column-rule(solid 1px #ccc)
+  +column-gap($gutter)
+  text-align: justify
+  >p
+    margin-top: 0px

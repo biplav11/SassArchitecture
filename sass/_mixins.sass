@@ -1,34 +1,15 @@
-=box($rad, $shadowColor, $grad1, $grad2 )
-    -webkit-border-radius: $rad
-    -moz-border-radius: $rad
-    -ms-border-radius: $rad
-    -o-border-radius: $rad
-    border-radius: $rad
+// GLOBAL MIXINS
 
-    -webkit-box-shadow: 0 5px 5px $shadowColor
-    -moz-box-shadow: 0 5px 5px $shadowColor
-    -ms-box-shadow: 0 5px 5px $shadowColor
-    -o-box-shadow: 0 5px 5px $shadowColor
-    box-shadow: 0 5px 5px $shadowColor
+=cascade($colour)
+  position: relative
+  &::before
+    position: absolute
+    content: ""
+    width: 100%
+    height: 100%
+    z-index: -2
+    top: 10px
+    left: -10px
+    background: darken($colour, 10%)
 
-    background: -webkit-linear-gradient($grad1, $grad2)
-    background: -moz-linear-gradient($grad1, $grad2)
-    background: -o-linear-gradient($grad1, $grad2)
-    background: linear-gradient($grad1, $grad2)
-
-=circle($rad, $height, $width, $bg, $color)
-    -webkit-border-radius: $rad
-    -moz-border-radius: $rad
-    -ms-border-radius: $rad
-    border-radius: $rad
-
-    height: $height
-    width: $width
-
-    line-height: $height
-    text-align: center
-
-    background: $bg
-    color: $color
-
-    margin: 0 auto
+    box-shadow: -10px 10px 0 darken($colour, 5%)

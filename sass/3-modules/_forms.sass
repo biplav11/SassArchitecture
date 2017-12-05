@@ -1,0 +1,31 @@
+// FORMS
+
+#{$all-text-inputs}
+    position: relative
+    padding: 10px
+    font-size: $base-size
+    border: 1px solid #ddd
+    outline: 0!important
+
+#{$all-text-inputs-focus}
+    border-color: $success
+    box-shadow: 2px 2px 2px #ddd
+    +placeholder
+        color: $success
+
+#{$all-buttons}
+    background: transparent
+    font-size: $base-size
+    font-weight: lighter
+    padding: 10px
+    border: 1px solid shade($pink, 10%)
+    color: $pink
+    border-radius: 0px
+    outline: 0
+    
+
+#{$all-buttons-hover},
+#{$all-buttons-focus}
+    background: shade($pink, 20%)
+    cursor: pointer
+    color: #fff
